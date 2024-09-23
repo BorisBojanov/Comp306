@@ -24,12 +24,13 @@ using namespace std;
 void TemperatureConversionTable() {
     cout << "Temperature Conversion Tables" << endl;
     cout << "      Temperature      |      Temperature" << endl;
-    cout << "       (degrees)       |       (degrees)" << endl;
-    cout << "   F           C     |       C           F" << endl;
+    cout << "       (degrees)       |       (degrees)  " << endl;
+    cout << "   F           C       |    C           F  " << endl;
 
     for (int i = -40; i <= 100; i += 5) {
         double fahrenheit = i;
         double celsius = (fahrenheit - 32) * 5 / 9;
+        cout << "  "; // Indentation for formatting to align the columns
         cout << setw(7) << fixed << setprecision(3) << fahrenheit << setw(12) << fixed << setprecision(3) << celsius << "  |  ";
         celsius = i;
         fahrenheit = (celsius * 9 / 5) + 32;
