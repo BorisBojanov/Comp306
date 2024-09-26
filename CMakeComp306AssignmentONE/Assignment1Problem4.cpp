@@ -40,11 +40,11 @@ Selection: x
 
 Thank you. Good bye.
 */ 
-
-using namespace std;
 #include <iostream>
 #include <string>
-#include "NumberValidator.h"
+#include <cctype>
+using namespace std;
+
 
 // Function to convert a string to lowercase
 string toLowerCase(string str) {
@@ -52,6 +52,19 @@ string toLowerCase(string str) {
         str[i] = tolower(str[i]);
     }
     return str;
+}
+// Function to check if input is a valid number
+bool isValidNumber(string target) {
+    int Count = 0;
+    for (char c : target) {
+        if (c == '.') {
+            Count++;
+            if (Count >1) return false;
+        } else if (!isdigit(c) && c != '-' && c != '+') {
+            return false;
+        } 
+    }
+    return true;
 }
 
 string getHelp (int target) {
@@ -85,7 +98,6 @@ string getHelp (int target) {
 
 int main(){
 
-    NumberValidator numValidator;
     std::string input;
     bool validInput = false;
 
@@ -105,7 +117,7 @@ int main(){
         // if input is the string x, exit the program
         // else print invalid input
 
-        if (numValidator.isValidNumber(input)) {
+        if (isValidNumber(input)) {
             int target = stoi(input);
             if (target >= 1 && target <= 5) {
                 cout << getHelp(target) << endl;
