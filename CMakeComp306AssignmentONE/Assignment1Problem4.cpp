@@ -199,7 +199,7 @@ int main(){
         cout << "4. While \n";
         cout << "5. Do-while \n";
         cout << "x. Exit" << "\n";
-        cout << "\n" << "Selection: " << "\n"  << endl;
+        cout << "\n" << "Selection: ";
 
         // Get user input
         cin >> input;
