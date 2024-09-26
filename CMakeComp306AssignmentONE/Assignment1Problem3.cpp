@@ -22,9 +22,9 @@ Temperature Conversion Tables
 using namespace std;
 
 void TemperatureConversionTable() {
-    cout << "Temperature Conversion Tables" << endl;
-    cout << "      Temperature      |      Temperature" << endl;
-    cout << "       (degrees)       |       (degrees)  " << endl;
+    cout << "Temperature Conversion Tables" << "\n";
+    cout << "      Temperature      |      Temperature" << "\n"; 
+    cout << "       (degrees)       |       (degrees)  " << "\n";
     cout << "   F           C       |    C           F  " << endl;
 
     for (int i = -40; i <= 100; i += 5) {
