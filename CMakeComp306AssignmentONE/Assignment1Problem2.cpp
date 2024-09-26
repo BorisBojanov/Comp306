@@ -1,11 +1,55 @@
-// Create tempeture converter
-// Take in an option from the user to convert from celsius to fahrenheit or fahrenheit to celsius.
-// Take input from user and convert it to fahrenheit.
-// Take input from user and convert it to celsius. 
 /*
+Assignment1Problem2.cpp
+
+Title: Assignment1Problem2.cpp
+Description: Tempeture converter
+Date: September 26 2024
+Author: Boris Bojanov
+Version: 1.0
+Copyright: 2024 Boris Bojanov
+
+DOCUMENTATION
+
+Program Purpose:
+    Prompts the user to convert from celsius to fahrenheit or fahrenheit to celsius.
+    Take input from user and convert it to fahrenheit.
+    Take input from user and convert it to celsius.
 Formula:
     T(F) = (T(C) * 9 / 5) + 32
     T(C) = (T(F) – 32 ) * 5 / 9
+Compile (assuming Cygwin is running): g++ -o Assignment1Problem2 Assignment1Problem2.cpp
+Execution (assuming Cygwin is running): ./Assignment1Problem2.exe
+
+Classes: none
+
+Variables:
+    inputUnit - string - used to store the user's input for the temperature unit
+    inputTemp - string - used to store the user's input for the temperature value
+    temperature - double - used to store the temperature value
+    validInput - bool - used to store the validity of the user's input
+    unit - string - used to store the temperature unit
+    celsius - double - used to store the celsius temperature
+    fahrenheit - double - used to store the fahrenheit temperature
+    Count - int - used to count the number of decimal points in the input
+
+TEST PLAN
+
+Normal case:
+    >This program converts Temperatures from Fahrenheit to Celsius and vice versa.
+    >Please enter your temperature unit (F for Fahrenheit, C for Celsius): F
+    >Please enter the temperature value: 32
+    >The temperature in Celsius is: 0
+
+Bad Data case 1 (Invalid unit)
+    >This program converts Temperatures from Fahrenheit to Celsius and vice versa.
+    >Please enter your temperature unit (F for Fahrenheit, C for Celsius): X
+    >Invalid input. Please enter F for Fahrenheit or C for Celsius.
+
+Bad Data case 2 (Invalid temperature value)
+    >This program converts Temperatures from Fahrenheit to Celsius and vice versa.
+    >Please enter your temperature unit (F for Fahrenheit, C for Celsius): F
+    >Please enter the temperature value: 32.5.5
+    >Invalid input. Please enter a valid number.
 */
 #include "Assignment1Problem2.h"
 
