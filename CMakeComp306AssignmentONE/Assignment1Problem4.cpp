@@ -40,9 +40,7 @@ Selection: x
 
 Thank you. Good bye.
 */ 
-#include <iostream>
-#include <string>
-#include <cctype>
+#include "Assignment1Problem4.h"
 using namespace std;
 
 
@@ -115,7 +113,7 @@ int main(){
         // if input is a number and is between 1 and 5
         // call the getHelp function and print the returned
         // if input is the string x, exit the program
-        // else print invalid input
+        // else print "invalid input"
 
         if (isValidNumber(input)) {
             int target = stoi(input);
