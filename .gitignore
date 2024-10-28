@@ -1,0 +1,7 @@
+
+# Ignore Folders
+cmake-3.31.0.rc2/
+# Ignore environment files
+.vscode
+.vscode/settings.json
+.vs

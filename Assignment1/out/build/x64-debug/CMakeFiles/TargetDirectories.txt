@@ -1,3 +1,0 @@
-C:/Users/boris/Desktop/COMP 306/CMakeComp306AssignmentONE/out/build/x64-debug/CMakeFiles/CMakeComp306AssignmentONE.dir
-C:/Users/boris/Desktop/COMP 306/CMakeComp306AssignmentONE/out/build/x64-debug/CMakeFiles/edit_cache.dir
-C:/Users/boris/Desktop/COMP 306/CMakeComp306AssignmentONE/out/build/x64-debug/CMakeFiles/rebuild_cache.dir
