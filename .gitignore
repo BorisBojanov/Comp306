@@ -4,3 +4,4 @@ cmake-3.31.0-rc2
 # Ignore env files
 .vscode
 .DS_Store
+/.DS_Store
