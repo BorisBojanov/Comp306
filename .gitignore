@@ -1,7 +1,5 @@
-
-# Ignore Folders
-cmake-3.31.0.rc2/
-# Ignore environment files
+# Ignore folders
+CMakeLists.txt
+# Ignore env files
 .vscode
-.vscode/settings.json
-.vs
+.DS_Store
