@@ -1,0 +1,5 @@
+# Ignore folders
+CMakeLists.txt
+# Ignore env files
+.vscode
+.DS_Store
