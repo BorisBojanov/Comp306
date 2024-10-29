@@ -49,7 +49,7 @@ int main() {
     int count = 0;
     cout << "Enter the name of the file: ";
     cin >> fileName;
-    ifstream file(fileName, ios::app);
+    ifstream file(fileName);
     string word;
     while (file >> word) {
         count++;
