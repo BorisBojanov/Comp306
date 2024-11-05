@@ -1,7 +1,15 @@
 /*
 title: Problem3.cpp
-description: Create a class called *Elevator* that can be moved between floors in an *N*-storey building. 
-Elevator uses a constructor to initialize the number of floors (*N*) in the building when the object is instantiated.
+description: Test the class Elevator in 5 possible scenarios.
+Date: 05, November 2024
+Author: Boris B
+Version: 1.0
+Copyright: BorisB 2024
+
+DOCUMENTATION
+
+Program Purpose:
+
 
 Elevator also has a default constructor that creates a five- (5) storey building.
 
@@ -11,11 +19,6 @@ Write a finalize() method that satisfies this termination condition and verifies
 
 In main(), test at least five (5) possible scenarios that can occur when Elevator is used in a building with many floors 
 (e.g., create, move from one floor to another, etc.).
-
-Date: 05, November 2024
-Author: Boris B
-Version: 1.0
-Copyright: BorisB 2024
 
 Compile: g++ Problem3.cpp Elevator.cpp -o Problem3
 Execution: ./Problem3

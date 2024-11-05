@@ -7,15 +7,30 @@ Version: 1.0
 Copyright: BorisB 2024
 
 DOCUMENTATION
-
+Program Purpose:
+Initialize the 
 */
 
 #ifndef ELEVATOR_H
 #define ELEVATOR_H
 
 class Elevator {
-    
+    private:
+    // Attributes
 
+    // Methods
+
+    public:
+    // Constructor
+    Elevator(int numFloors);
+
+    // Destructor
+    ~Elevator();
+
+    // Attributes
+    
+    // Methods
+    void move(int floor);
 };
 
 #endif // ELEVATOR_H
