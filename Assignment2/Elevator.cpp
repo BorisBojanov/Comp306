@@ -1,6 +1,6 @@
 /*
 title: Elevator.cpp
-description: Create a class called Elev
+description: Create a class called Elevator with a parameterized constructor to specify number of floors.
 date: 05, November 2024
 author: Boris B
 version: 1.0
@@ -11,7 +11,32 @@ Program Purpose:
 Create a class called Elevator that can be moved between floors in an N-storey building. 
 Elevator uses a constructor to initialize the number of numFloors(N) in the building when the object is instantiated.
 
+Compile: g++ Problem3.cpp Elevator.cpp -o Problem3
+Execution: This file is not executable
 
+Classes:
+Elevator - class for creating Elevator objects
+
+Variables:
+numFloorsInstance - int - number of floors in the building
+currentFloorInstance - int - current floor of the elevator
+
+Methods:
+Elevator(int numFloors) - Constructor - initialize the number of numFloors(N) in the building when the object is instantiated
+~Elevator() - Destructor - delete the Elevator object
+finalize() - void - move the elevator to the first floor when the object is cleaned up
+
+getNumFloors() - int - get the number of floors in the building
+getCurrentFloor() - int - get the current floor of the elevator
+
+setFloor(int floor) - void - set the floor of the elevator
+setFloorUpOne() - void - move the elevator up one floor
+setFloorDownOne() - void - move the elevator down one floor
+
+TEST PLAN
+Normal case:
+Make sure the Elevator class is implemented correctly by calling the get and set methods outside of the class.
+ 
 */ 
 
 #include "Elevator.h"
@@ -29,6 +54,8 @@ Elevator::~Elevator() {
 void Elevator::finalize() {
     currentFloorInstance = 1;
     cout << "Elevator ending: elevator returned to the first floor" << endl;
+    // Delete the object
+    delete this; // This is calling ~Elevator() destructor.
 }
 
 // Get Methods

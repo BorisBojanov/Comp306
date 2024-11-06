@@ -1,6 +1,6 @@
 /*
 title: Problem3.cpp
-description: Test the class Elevator in 5 possible scenarios.
+description: Test the class Elevator in at least 5 possible scenarios.
 Date: 05, November 2024
 Author: Boris B
 Version: 1.0
@@ -27,24 +27,38 @@ Classes:
 Elevator
 
 Variables:
-N - int - number of floors in the building
-elevator - Elevator - object of Elevator class
+slowElevator - Elevator - object of Elevator class
 
 Methods:
 main() - int - main function to test the Elevator class
 
-TEST CASES:
 
+TEST CASES:
+Test case Number of floors in the building 7:
+    Current floor: 1
+Test case Moce to floor 3:
+    Current floor: 3
+Test case Move up one floor:
+    Current floor: 4
+Test case Move down one floor:
+    Current floor: 3
+Test case Move to floor 9:
+    Error: Floor number is greater than the number of floors in the building
+    Current floor: 3
+Test case Destructor:
+    Elevator object is being deleted
+    Elevator ending: elevator returned to the first floor
 
 Discussion:
 If an object is created using new, it must be explicitly deleted with delete to invoke the destructor.
+If an object is created on the stack, the destructor is automatically called when the object goes out of scope.
 */
 
 #include "Elevator.h"
 
 int main() {
     // Dynamically allocate an Elevator object
-    Elevator* slowElevator = new Elevator(5); // Use new to create the object
+    Elevator* slowElevator = new Elevator(7); // Use new to create the object
     cout << "Number of floors in the building: " << slowElevator->getNumFloors() << endl;
     cout << "Current floor: " << slowElevator->getCurrentFloor() << endl;
     slowElevator->setFloor(3);
@@ -53,11 +67,11 @@ int main() {
     cout << "Current floor: " << slowElevator->getCurrentFloor() << endl;
     slowElevator->setFloorDownOne();
     cout << "Current floor: " << slowElevator->getCurrentFloor() << endl;
-    slowElevator->setFloor(6);
+    slowElevator->setFloor(9);
     cout << "Current floor: " << slowElevator->getCurrentFloor() << endl;
+    
+    // Manually delete the object to invoke the destructor and free memory
     slowElevator->finalize();
 
-    // Manually delete the object to invoke the destructor and free memory
-    delete slowElevator;
     return 0;
 }

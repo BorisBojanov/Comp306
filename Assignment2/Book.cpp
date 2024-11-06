@@ -13,6 +13,7 @@
     The Book class should have get and set methods for each attribute.
 
     Compile: This file is to be included in Problem2.cpp
+    Execution: This file is not executable
 
     Classes:
     Book - class for creating Book objects
@@ -25,7 +26,7 @@
     publisherInstance - string - publisher of the book
     yearOfPublicationInstance - string - year of publication of the book
 
-    Functions:
+    Methods:
     Book() - constructor - default constructor
     Book(string title, string ISBN, string author, string edition, string publisher, string yearOfPublication) - constructor - constructor with parameters
     getTitle() - string - get the title of the book
