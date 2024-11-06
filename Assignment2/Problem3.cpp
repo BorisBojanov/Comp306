@@ -23,10 +23,41 @@ In main(), test at least five (5) possible scenarios that can occur when Elevato
 Compile: g++ Problem3.cpp Elevator.cpp -o Problem3
 Execution: ./Problem3
 
-Classes: Elevator
+Classes: 
+Elevator
 
 Variables:
-    N - int - number of floors in the building
-    elevator - Elevator - object of Elevator class
+N - int - number of floors in the building
+elevator - Elevator - object of Elevator class
+
+Methods:
+main() - int - main function to test the Elevator class
+
+TEST CASES:
+
+
+Discussion:
+If an object is created using new, it must be explicitly deleted with delete to invoke the destructor.
 */
 
+#include "Elevator.h"
+
+int main() {
+    // Dynamically allocate an Elevator object
+    Elevator* slowElevator = new Elevator(5); // Use new to create the object
+    cout << "Number of floors in the building: " << slowElevator->getNumFloors() << endl;
+    cout << "Current floor: " << slowElevator->getCurrentFloor() << endl;
+    slowElevator->setFloor(3);
+    cout << "Current floor: " << slowElevator->getCurrentFloor() << endl;
+    slowElevator->setFloorUpOne();
+    cout << "Current floor: " << slowElevator->getCurrentFloor() << endl;
+    slowElevator->setFloorDownOne();
+    cout << "Current floor: " << slowElevator->getCurrentFloor() << endl;
+    slowElevator->setFloor(6);
+    cout << "Current floor: " << slowElevator->getCurrentFloor() << endl;
+    slowElevator->finalize();
+
+    // Manually delete the object to invoke the destructor and free memory
+    delete slowElevator;
+    return 0;
+}

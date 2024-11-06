@@ -14,10 +14,17 @@ Initialize the
 #ifndef ELEVATOR_H
 #define ELEVATOR_H
 
+#include <string>
+#include <vector>
+#include <iostream>
+
+using namespace std;
+
 class Elevator {
     private:
     // Attributes
-
+    int numFloorsInstance;
+    int currentFloorInstance;
     // Methods
 
     public:
@@ -28,9 +35,16 @@ class Elevator {
     ~Elevator();
 
     // Attributes
-    
+
     // Methods
-    void move(int floor);
+    void finalize();
+    // Get Methods
+    int getNumFloors();
+    int getCurrentFloor();
+    // Set Methods
+    void setFloor(int floor);
+    void setFloorUpOne();
+    void setFloorDownOne();
 };
 
 #endif // ELEVATOR_H
