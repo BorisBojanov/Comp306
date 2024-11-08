@@ -43,15 +43,17 @@ It is tested by Problem4.cpp, which creates instances of the derived classes and
 
 #include "Rodent.h"
 
+// Constructor
 Rodent::Rodent(string name, string species) {
     this->nameInstance = name;
     this->rodentSpecies = species;
 }
-
+// Destructor
 Rodent::~Rodent() {
     cout << "Rodent destructor" << endl;
 }
 
+// Get Methods
 void Rodent::getEat() {
     cout << "Rodent eats plants or bugs or seeds" << endl;
 }

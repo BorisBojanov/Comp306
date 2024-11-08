@@ -1,7 +1,7 @@
 
 /*
 Title:Gerbil.cpp
-Description: 
+Description: Define and initialize meathods, variables for the Gerbil class
 Date: 06, November 2024
 Author: Boris B
 Version: 1.0
@@ -9,6 +9,7 @@ Copyright: BorisB 2024
 
 DOCUMENTATION
 Program Purpose:
+Define and initialize meathods, variables for the Gerbil class
 
 Compile:
 This file is not meant to be compiled on its own.
@@ -37,16 +38,17 @@ TEST PLAN
 Normal case:
 This class is meant to be used by Problem4.cpp, 
 which creates instances of the derived classes and calls the methods to demonstrate the behaviors of each rodent.
-
 */ 
 
 #include "Gerbil.h"
 
+// Constructor
 Gerbil::Gerbil( string name , string species ) : Rodent( name, species ) {
     this->nameInstance = name;
     this->rodentSpecies = species;
 }
 
+// Destructor
 Gerbil::~Gerbil() {
     cout << this->nameInstance << " the " << this->rodentSpecies << " destructor." << endl;
 }

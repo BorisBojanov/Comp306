@@ -1,6 +1,6 @@
 /*
 Title:Rodent.h
-Description:
+Description: Declare the Rodent class and its methods that are common to all rodents.
 Date: 06, November 2024
 Author: Boris B
 Version: 1.0
