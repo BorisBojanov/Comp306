@@ -15,7 +15,8 @@ and add and subtract point coordinates.
 Compile
 Execute
 
-Classes: Point
+Classes: 
+Point - class for adding and subtracting points to a ?list?/?Array?/?Vector? of points
 
 Variables:
     x - double - x coordinate of point
@@ -23,7 +24,7 @@ Variables:
 
 Methods:
     Point() - constructor
-    Point(double IncommingX, double IncommingY) - constructor
+    Point(double xVal, double yVal) - constructor
     ~Point() - destructor
 
 TEST PLAN
@@ -31,40 +32,51 @@ Normal case:
 */
 
 #include "Point.h"
+#include <vector>
+
+using namespace std;
 
 // Constructor
 Point::Point() : x(0), y(0) { // initializes x and y to 0
-    this->x = 0;
-    this->y = 0;
 }
 
-Point::Point(double IncommingX, double IncommingY) : x(IncommingX), y(IncommingY) { // initializes x and y to given values
-    this->x = IncommingX;
-    this->y = IncommingY;
+Point::Point(double xVal, double yVal) : x(xVal), y(yVal) { // initializes x and y to given values
+
     }
 
 // Destructor
 Point::~Point() {
-    cout << "Point destructor" << endl;
 }
 
 // Get Methods
+double Point::getX() const {
+    return x;
+}
 
-double Point::show() {
+double Point::getY() const {
+    return y;
+}
+
+double Point::show() const { 
     cout << "x: " << x << " y: " << y << endl;
-    return x, y;
+    return 0;
 }
 
 // Set Methods
 
-void Point::add(double IncommingX, double IncommingY) {
-    this->x += IncommingX;
-    this->y += IncommingY;
+void Point::add(double xVal, double yVal) { // Store the new values in the history vectors
+    x += xVal;
+    y += yVal;
 
+    listOfCoordinatesX.push_back(xVal);
+    listOfCoordinatesY.push_back(yVal); 
+    
 }
 
-void Point::subtract(double IncommingX, double IncommingY) {
-    this->x -= IncommingX;
-    this->y -= IncommingY;
-
+void Point::subtract(double xVal, double yVal) {
+    x -= xVal;
+    y -= yVal;
+    
+    listOfCoordinatesX.push_back(-xVal);
+    listOfCoordinatesY.push_back(-yVal); 
 }

@@ -9,6 +9,25 @@ Copyright: Boris B 2024
 DOCUMENTATION
 program purpose:
     Create a class to represent a point with x and y coordinates
+
+Compile
+Execute
+
+Classes: 
+    Point - class for adding and subtracting points to a ?list?/?Array?/?Vector? of points
+
+Variables:
+    x - double - x coordinate of point
+    y - double - y coordinate of point
+
+Methods:
+
+TEST PLAN
+Normal case:
+
+Discussion:
+vector<double>listOfCoordinatesX(); is a function declaration
+vector<double>listOfCoordinatesX; is initializing the vector
 */
 
 #ifndef POINT_H
@@ -23,26 +42,33 @@ using namespace std;
 
 class Point {
     private:
-    double IncommingX, IncommingY;
+    double xVal, yVal;
 
     protected:
-        double x, y;
+    double x, y;
+    // Variables
+    vector<double>listOfCoordinatesX; 
+    vector<double>listOfCoordinatesY;
+
     public:
 
     // Constructors
     Point(); 
     
-    Point(double IncommingX, double IncommingY);
+    Point(double xVal, double yVal);
 
     // Destructor
     ~Point();
 
     // Get Methods
-    double show();
+    double getX() const;
+    double getY() const;
+
+    double show() const;
 
     // Set Methods
-    void add(double x, double y);
-    void subtract(double x, double y);
+    void add(double xVal, double yVal); // add point coordinates
+    void subtract(double xVal, double yVal); // subtract point coordinates
 };
 
 #endif // POINT_H
