@@ -15,9 +15,10 @@ and provide the coordinates (Points) of a rectangle that encloses the shape (a b
 These will be overloaded by the derived classes; therefore, 
 the default methods for Shape will only print a simple message to standard output.
 
-Compile
-Execute
-
+Compile:
+This file is meant to be compiled with Problem5.cpp:  
+Execute:
+./Problem5
 Classes:
 Shape - class for a shape
 
@@ -27,12 +28,11 @@ points - vector<Point> - vector of points that make up the shape
 */
 
 #include "Shape.h"
-#include <iostream>
 
 using namespace std;
 
-// Constructor
-Shape::Shape(const vector<Point>& points) : coordinates(points) {
+// Constructors
+Shape::Shape() {
 }
 
 // Destructor
@@ -54,4 +54,13 @@ double Shape::getCircumference() const {
 // Default getBoundingBox method
 void Shape::getBoundingBox() const {
     cout << "Calculating bounding box is not defined for Shape." << endl;
+
+}
+// Display method
+void Shape::display() {
+    cout << "Shape" << endl;
+    cout << "Area: " << getArea() << endl;
+    cout << "Circumference: " << getCircumference() << endl;
+    cout << "Bounding Box: ";
+    getBoundingBox();
 }

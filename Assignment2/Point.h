@@ -24,6 +24,7 @@ Methods:
 
 TEST PLAN
 Normal case:
+Tested in the main program.
 
 Discussion:
 vector<double>listOfCoordinatesX(); is a function declaration
@@ -46,15 +47,11 @@ class Point {
 
     protected:
     double x, y;
-    // Variables
-    vector<double>listOfCoordinatesX; 
-    vector<double>listOfCoordinatesY;
 
     public:
 
     // Constructors
     Point(); 
-    
     Point(double xVal, double yVal);
 
     // Destructor

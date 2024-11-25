@@ -12,8 +12,10 @@ Create methods show(), add() and subtract()
 to display the Point x and y values,
 and add and subtract point coordinates.
 
-Compile
-Execute
+Compile:
+This file is meant to be compiled with Problem5.cpp:  
+Execute:
+./Problem5
 
 Classes: 
 Point - class for adding and subtracting points to a ?list?/?Array?/?Vector? of points
@@ -32,7 +34,6 @@ Normal case:
 */
 
 #include "Point.h"
-#include <vector>
 
 using namespace std;
 
@@ -41,7 +42,6 @@ Point::Point() : x(0), y(0) { // initializes x and y to 0
 }
 
 Point::Point(double xVal, double yVal) : x(xVal), y(yVal) { // initializes x and y to given values
-
     }
 
 // Destructor
@@ -66,17 +66,10 @@ double Point::show() const {
 
 void Point::add(double xVal, double yVal) { // Store the new values in the history vectors
     x += xVal;
-    y += yVal;
-
-    listOfCoordinatesX.push_back(xVal);
-    listOfCoordinatesY.push_back(yVal); 
-    
+    y += yVal;    
 }
 
 void Point::subtract(double xVal, double yVal) {
     x -= xVal;
     y -= yVal;
-    
-    listOfCoordinatesX.push_back(-xVal);
-    listOfCoordinatesY.push_back(-yVal); 
 }

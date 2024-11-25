@@ -19,13 +19,23 @@ This file is not meant to be compiled it is a header file.
 Classes:
 Circle - class for a circle
 
+Variables:
+center - Point - center point of the circle
+radius - double - radius of the circle
+
+Methods:
+getArea() - calculate the area of the shape
+getCircumference() - calculate the circumference of the shape
+getBoundingBox() - calculate the bounding box of the shape
+
+TEST PLAN
+normal case:
+Tested in the main program.
 */
 
 #ifndef CIRCLE_H
 #define CIRCLE_H
 
-#include <iostream>
-#include <cmath>
 #include "Shape.h"
 
 using namespace std;

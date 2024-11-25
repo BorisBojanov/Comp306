@@ -8,7 +8,7 @@ Be sure to clearly document the method chosen.
 You may test your program using any number of text files; however, you must be sure to test your program using the Sample Text File provided at the end of this assignment (excerpt.txt). 
 This file is also available in the Assessment section of the course home page.
 
-Date: 2021-11-28
+Date: 24 November 2024
 Author: Boris Bojanov 
 Version: 1.0
 Copyright: Boris Bojanov
@@ -21,18 +21,21 @@ Program Purpose:
     Count the whitespace-separated words in a file.
 
 Compile (assuming Cygwin is running): g++ -o Problem1 Problem1.cpp
-Execution (assuming Cygwin is running): ./Problem1.exe
+Execution (assuming Cygwin is running): ./Problem1
 
-Classes: TBD
+Classes:
+    None
 
 Variables:
     fileName - String - used to store the name of the file. 
     count - int - used to store the number of, whitespace-separated, words in the file.
-*/
+    file - ifstream - used to open the file.
+    word - string - used to store the words from the file.
 
-/*
+Functions:
+    main() - used to execute the program.
+
 TEST PLAN
-
 Normal case:
     >Enter the name of the file: excerpt.txt
     >The number of "whitespace-separated words" in the file is (Count of white spaces).
@@ -53,7 +56,7 @@ int main() {
     string word;
     while (file >> word) {
         count++;
-        cout << word << endl;
+        // cout << word << endl;
     }
     cout << "The number of \"whitespace-separated words\" in the file is " << count << endl;
 return 0;
