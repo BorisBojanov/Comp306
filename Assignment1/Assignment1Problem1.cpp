@@ -10,21 +10,21 @@ Copyright: 2024 Boris Bojanov
 
 
 DOCUMENTATION
-    Program Purpose:
-        Display a multiplication table from 1 to 12.
+Program Purpose:
+    Display a multiplication table from 1 to 12.
 
-    Compile (assuming Cygwin is running): g++ -o Assignment1Problem1 Assignment1Problem1.cpp
-    Execution (assuming Cygwin is running): ./Assignment1Problem1.exe
+Compile (assuming Cygwin is running): g++ -o Assignment1Problem1 Assignment1Problem1.cpp
+Execution (assuming Cygwin is running): ./Assignment1Problem1.exe
 
-    Classes: none
+Classes: none
 
-    Variables:
-        i - int - used to iterate through the rows of the multiplication table
-        j - int - used to iterate through the columns of the multiplication table
-    
-    TEST PLAN
-        Make sure the output matches the format specified in the problem description.
-    
+Variables:
+    i - int - used to iterate through the rows of the multiplication table
+    j - int - used to iterate through the columns of the multiplication table
+
+TEST PLAN
+    Make sure the output matches the format specified in the problem description.
+
 
 */
 #include "Assignment1Problem1.h"

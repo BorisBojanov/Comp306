@@ -6,7 +6,7 @@
 class Pig : public Animal {
 public:
     Pig();
-    // ~Pig();
+    ~Pig();
 
     void sound();
 };

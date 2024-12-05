@@ -2,14 +2,15 @@
 
 // Constructor
 Cow::Cow(){
+    
     type = "cow";
-    std::cout << "I am a cow" << std::endl;
+    std::cout << "I am a "<< type << std::endl;
 }
 
-// Cow::~Cow(){
-//     std::cout << "The cow is dead now" << std::endl;
-// }
+Cow::~Cow(){
+    std::cout << "The cow is dead now" << std::endl;
+}
 
 void Cow::sound(){
-    std::cout << "The cow says moo" << std::endl;
+    std::cout << "The " << type << " says moo" << std::endl;
 }

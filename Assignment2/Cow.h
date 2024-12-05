@@ -6,7 +6,7 @@
 class Cow : public Animal {
     public:
         Cow(); // Default constructor
-        // ~Cow(); // Deconstructor
+        ~Cow(); // Deconstructor
 
         void sound(); // Sound method
 };
