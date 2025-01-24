@@ -9,8 +9,15 @@
 #include "Game.h" 
 using namespace std;
 
-class locations : public Game {
+class Locations : public Game {
 
+public:
+    Locations();
+    void setPlayerLocation();
+    void setCharacterLocation();
+    void setItemLocation();
+    string getPlayerLocation();
+    
 };
 
 #endif // LOCATIONS_H
