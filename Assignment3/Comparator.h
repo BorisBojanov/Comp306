@@ -22,7 +22,7 @@ compareTo - bool - compare two Book objects
 
 TEST PLAN
 Normal case:
-Make sure the Comparator class is implemented correctly by calling the compareTo method outside of the class.
+Make sure the Comparator class is implemented correctly by calling the "compareTo" method outside of the class.
 */
 
 #ifndef COMPARATOR_H

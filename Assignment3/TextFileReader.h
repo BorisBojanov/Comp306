@@ -31,6 +31,7 @@ Variables:
     arrayCounter: an integer to keep track of the number of lines read into the array.
 
 TESTING PLAN
+This class is tested in TextFileReaderDemo.cpp.
 */
 
 #ifndef TEXTFILEREADER_H

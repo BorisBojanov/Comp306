@@ -1,0 +1,8 @@
+[
+{
+  "directory": "/Users/boris/Desktop/Comp306/Assignment3/build",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++   -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.1.sdk -o CMakeFiles/Assignment4.dir/Assignment4.cpp.o -c /Users/boris/Desktop/Comp306/Assignment3/Assignment4.cpp",
+  "file": "/Users/boris/Desktop/Comp306/Assignment3/Assignment4.cpp",
+  "output": "CMakeFiles/Assignment4.dir/Assignment4.cpp.o"
+}
+]

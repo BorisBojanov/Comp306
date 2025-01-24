@@ -28,6 +28,8 @@ Variables:
     textArray: an array of 100 elements to store the lines of the text file.
     arrayCounter: an integer to keep track of the number of lines read into the array.
 
+TESTING PLAN
+This class is tested in TextFileReaderDemo.cpp.
 */
 
 #include "TextFileReader.h"

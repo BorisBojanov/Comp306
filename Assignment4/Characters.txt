@@ -1,0 +1,1 @@
+[Alice : Friend: True :  Inventory : ItemName1 : ItemName2]

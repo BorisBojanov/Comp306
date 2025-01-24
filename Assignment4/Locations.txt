@@ -1,0 +1,4 @@
+[StartingLocation: ShortDescription: This is a short description of the location. : LongDescription: This is a longer description of the location and it includes more details. : North: False : South: True :East: True : West: False ]
+[Room1 : ShortDescription: This is a short description of the Room1. : LongDescription: This is a longer description of the Room1 and it includes more details. : North: False : South: True : East: True : West: False]
+[Room2 : ShortDescription: This is a short description of the Room2. : LongDescription: This is a longer description of the Room2 and it includes more details. : North: False : South: True : East: True : West: False]
+[Room3 : ShortDescription: This is a short description of the Room3. : LongDescription: This is a longer description of the Room3 and it includes more details. : North: False : South: True : East: True : West: False]

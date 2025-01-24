@@ -58,6 +58,13 @@ bad data case 1: ./TextFileReaderDemo <Incorrect file name>
     Expected: Error: Unable to open file.
 bad data case 2: ./TextFileReaderDemo 
     Expected: Usage: ./TextFileReaderDemo <filename>
+
+Discussion:
+    The TextFileReader class is a simple
+    class that reads the contents of a text file into an array of Strings.
+    The class is useful for reading the contents of a text file into memory for further processing.
+    The class is not meant to be used for large files, as it reads the entire file into memory at once.
+    The class is also not meant to be used for binary files, as it reads the file as text.
 */
 
 

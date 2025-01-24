@@ -1,0 +1,3 @@
+[ItemName1: ItemDescription: Generic Item ItemDescription : Edible: True : Location: room1]
+[ItemName2: ItemDescription: brahhh blahhhh: Edible: False : Location: none]
+[ItemName2: ItemDescription: brahhh blahhhh: Edible: False : Location: Inventory]

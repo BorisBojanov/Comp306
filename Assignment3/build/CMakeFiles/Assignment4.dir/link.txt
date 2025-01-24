@@ -1,0 +1,2 @@
+/Library/Developer/CommandLineTools/usr/bin/ar qc libAssignment4.a CMakeFiles/Assignment4.dir/Assignment4.cpp.o
+/Library/Developer/CommandLineTools/usr/bin/ranlib libAssignment4.a
