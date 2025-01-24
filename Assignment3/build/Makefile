@@ -116,43 +116,6 @@ depend:
 	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
-#=============================================================================
-# Target rules for targets named Assignment4
-
-# Build rule for target.
-Assignment4: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Assignment4
-.PHONY : Assignment4
-
-# fast build rule for target.
-Assignment4/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Assignment4.dir/build.make CMakeFiles/Assignment4.dir/build
-.PHONY : Assignment4/fast
-
-Assignment4.o: Assignment4.cpp.o
-.PHONY : Assignment4.o
-
-# target to build an object file
-Assignment4.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Assignment4.dir/build.make CMakeFiles/Assignment4.dir/Assignment4.cpp.o
-.PHONY : Assignment4.cpp.o
-
-Assignment4.i: Assignment4.cpp.i
-.PHONY : Assignment4.i
-
-# target to preprocess a source file
-Assignment4.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Assignment4.dir/build.make CMakeFiles/Assignment4.dir/Assignment4.cpp.i
-.PHONY : Assignment4.cpp.i
-
-Assignment4.s: Assignment4.cpp.s
-.PHONY : Assignment4.s
-
-# target to generate assembly for a file
-Assignment4.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Assignment4.dir/build.make CMakeFiles/Assignment4.dir/Assignment4.cpp.s
-.PHONY : Assignment4.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -161,10 +124,6 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... Assignment4"
-	@echo "... Assignment4.o"
-	@echo "... Assignment4.i"
-	@echo "... Assignment4.s"
 .PHONY : help
 
 

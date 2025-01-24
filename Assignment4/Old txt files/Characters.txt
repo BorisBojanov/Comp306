@@ -1,0 +1,6 @@
+boris, The slayer of all code, 3, true
+cheshire-cat, Intelligent and mischievous inhabitant of the forest. Frequently quotes the. Jabberwocky., 3, true
+thief, This guy looks shady, 2, false
+door, Tiny Door maybe if you give it a golden key you will get out: The small door that leads to a beautiful garden, 2, true
+white-rabbit, White Rabbit: A highly energetic and frequently tardy rabbit who leads Alice through wonderland., 2, true
+mad-hatter, Mad Hatter: The host of the Tea Party. An eccentric and nonsensical fellow who befriends Alice., 3, true

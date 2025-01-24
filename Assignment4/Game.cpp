@@ -14,29 +14,19 @@ Program Purpose:
     You may find more classes are necessary to complete the game.
 
 */
-#include <fstream>
-#include <map>
-#include <iostream>
-#include <string>
-#include <iostream>
 
-
+#include "Game.h"
 using namespace std;
-class Game {
-public:
-    Game();
-    void loadFiles();
-};
+
 
 Game::Game(){
 }
-
-Game::loadFiles(){
+void Game::loadFiles(string targetFile){
         // Map to store actions and their descriptions
     std::map<std::string, std::string> actions;
 
     // Open the file
-    std::ifstream file("Actions.txt");
+    std::ifstream file(targetFile);
     if (!file) {
         std::cerr << "Error: Could not open file." << std::endl;
     }
@@ -65,14 +55,13 @@ Game::loadFiles(){
 
     // Display all actions
     for (const auto& pair : actions) {
-        std::cout << "Action: " << pair.first << " -> Description: " << pair.second << std::endl;
+        std::cout << "Action: " << pair.first << "," << pair.second << std::endl;
     }
-
 }
 
 int main() {
     cout << "Hello, World!" << endl;
     Game game;
-    game.loadFiles();
+    game.loadFiles("Actions.txt");
     return 0;
 }
