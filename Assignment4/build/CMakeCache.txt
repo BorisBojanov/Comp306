@@ -319,7 +319,7 @@ MEMORYCHECK_COMMAND:FILEPATH=MEMORYCHECK_COMMAND-NOTFOUND
 MEMORYCHECK_SUPPRESSIONS_FILE:FILEPATH=
 
 //Name of the computer/site where compile is being run
-SITE:STRING=BorisPro3.local
+SITE:STRING=mac.ucalgary.ca
 
 
 ########################

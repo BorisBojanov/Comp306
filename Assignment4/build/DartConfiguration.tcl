@@ -11,7 +11,7 @@ BuildDirectory: /Users/boris/Desktop/Comp306/Assignment4/build
 CostDataFile: 
 
 # Site is something like machine.domain, i.e. pragmatic.crd
-Site: BorisPro3.local
+Site: mac.ucalgary.ca
 
 # Build name is osname-revision-compiler, i.e. Linux-2.4.2-2smp-c++
 BuildName: Darwin-c++

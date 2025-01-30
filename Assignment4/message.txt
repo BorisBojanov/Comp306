@@ -1,0 +1,166 @@
+Updated Structure
+Actions.h – Defining the Actions Class
+cpp
+Copy
+#ifndef ACTIONS_H
+#define ACTIONS_H
+
+#include <iostream>
+
+class Actions {
+public:
+    void pickUpInventory() {
+        std::cout << "Picking up inventory...\n";
+    }
+
+    void changeLocationFlags() {
+        std::cout << "Changing location flags...\n";
+    }
+
+    void attackEnemy() {
+        std::cout << "Attacking enemy...\n";
+    }
+
+    // Add more actions as needed
+};
+
+#endif  // ACTIONS_H
+Control.h – Defining the Control Class (with User Input Handling)
+cpp
+Copy
+#ifndef CONTROL_H
+#define CONTROL_H
+
+#include "Actions.h"
+#include <string>
+
+class Control {
+private:
+    Actions& actions;  // Reference to the Actions class
+
+public:
+    Control(Actions& actions);  // Constructor accepts Actions reference
+
+    void readInput();  // Method to read user input and execute actions
+    bool isValidAction(const std::string& actionInput);  // Method to check if input is valid
+};
+
+#endif  // CONTROL_H
+Control.cpp – Implementing User Input Handling and Action Execution
+cpp
+Copy
+#include "Control.h"
+#include <iostream>
+#include <sstream>
+#include <map>
+
+Control::Control(Actions& actions) : actions(actions) {}
+
+void Control::readInput() {
+    std::string input;
+    std::cout << "Enter an action (pickup, location, attack, quit): ";
+    std::getline(std::cin, input);
+
+    // Check if the input corresponds to a valid action
+    if (isValidAction(input)) {
+        if (input == "pickup") {
+            actions.pickUpInventory();
+        } else if (input == "location") {
+            actions.changeLocationFlags();
+        } else if (input == "attack") {
+            actions.attackEnemy();
+        }
+    } else {
+        std::cout << "Invalid action! Please try again.\n";
+    }
+}
+
+bool Control::isValidAction(const std::string& actionInput) {
+    // Define a set of valid actions (for simplicity, we check string comparison)
+    static const std::map<std::string, bool> validActions = {
+        {"pickup", true},
+        {"location", true},
+        {"attack", true}
+    };
+
+    return validActions.find(actionInput) != validActions.end();
+}
+Game.h – The Game Class (Wrapping Everything Together)
+cpp
+Copy
+#ifndef GAME_H
+#define GAME_H
+
+#include "Control.h"
+
+class Game {
+private:
+    Actions actions;  // Actions object
+    Control control;  // Control object that handles user input and calls actions
+
+public:
+    Game();  // Constructor
+
+    void startGame();  // Start the game and run input loop
+};
+
+#endif  // GAME_H
+Game.cpp – The Game Class Implementation
+cpp
+Copy
+#include "Game.h"
+
+Game::Game() : control(actions) {
+    // Game constructor initializes Control with Actions
+    std::cout << "Game started! Enter actions to perform...\n";
+}
+
+void Game::startGame() {
+    // Keep reading user input until the user chooses to quit
+    while (true) {
+        control.readInput();  // Read input from user and execute corresponding action
+    }
+}
+main.cpp – Main Function to Run the Game
+cpp
+Copy
+#include "Game.h"
+
+int main() {
+    Game game;  // Create the Game object, which initializes Control and Actions
+    game.startGame();  // Start the game and begin reading user input
+
+    return 0;
+}
+Explanation of the New Design:
+Control Class:
+
+readInput(): This method handles reading user input via std::getline. It prompts the user for an action, checks if the action is valid, and then calls the corresponding method in the Actions class.
+isValidAction(): This method checks if the input string corresponds to a valid action by using a std::map of valid actions (pickup, location, attack, etc.). If the action is valid, it returns true, otherwise false.
+Based on the input, the corresponding action (e.g., pickUpInventory(), changeLocationFlags(), etc.) is executed.
+Game Class:
+
+startGame(): This method enters a loop where it continuously reads input from the user until the game is manually exited. It delegates the input handling to the Control class.
+Actions Class:
+
+This class defines the various actions available in the game (e.g., picking up inventory, changing location flags, attacking an enemy, etc.). These methods are called by Control based on user input.
+Example Execution Flow:
+The Game object is created and initialized, which in turn creates a Control object (which has access to the Actions object).
+The startGame() method enters a loop and repeatedly asks for user input.
+The user enters a command like pickup, location, or attack.
+The Control class reads the input, checks if it's valid using the isValidAction() method, and if valid, it calls the corresponding method in Actions to execute the action.
+If the user enters an invalid action, they are prompted again to try a valid input.
+Example Output:
+mathematica
+Copy
+Game started! Enter actions to perform...
+Enter an action (pickup, location, attack, quit): pickup
+Picking up inventory...
+
+Enter an action (pickup, location, attack, quit): attack
+Attacking enemy...
+
+Enter an action (pickup, location, attack, quit): location
+Changing location flags...
+
+Enter an action (pickup, location, attack, quit): quit

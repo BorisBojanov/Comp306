@@ -1,23 +1,44 @@
+// Locations.h
 #ifndef LOCATIONS_H
 #define LOCATIONS_H
 
-#include <fstream>
-#include <map>
-#include <iostream>
 #include <string>
+#include <vector>
+#include <map>
+#include <fstream>
 #include <iostream>
-#include "Game.h" 
+
 using namespace std;
 
-class Locations : public Game {
+class Location {
+private:
+    vector<Location> locations;
+    string name;
+    string shortDescription;
+    string longDescription;
+    map<string, bool> connections;
 
 public:
-    Locations();
-    void setPlayerLocation();
-    void setCharacterLocation();
-    void setItemLocation();
-    string getPlayerLocation();
-    
-};
+    // Constructors
+    Location();
+    // Constructor
+    Location(const std::string& name, const std::string& shortDesc, const std::string& longDesc, const std::map<std::string, bool>& connections)
+        : name(name), shortDescription(shortDesc), longDescription(longDesc), connections(connections) {}
+    // Getters
+    string getName() const;
+    string getShortDescription() const;
+    string getLongDescription() const;
+    map<string, bool> getConnections() const;
 
-#endif // LOCATIONS_H
+    Location getCurrentLocation() const { return currentLocation; }
+
+    // Static method to load locations
+    static vector<Location> loadFromFile(const string& fileName);
+    
+    // Setters
+    void setLocationsValues(vector<Location> locations);
+
+    void setCurrentLocation(Location* loc) { currentLocation = loc; }
+
+};
+#endif

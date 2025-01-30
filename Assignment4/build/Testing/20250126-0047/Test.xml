@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Site BuildName="Darwin-c++"
-	BuildStamp="20250124-0202-Experimental"
-	Name="BorisPro3.local"
+	BuildStamp="20250126-0047-Experimental"
+	Name="mac.ucalgary.ca"
 	Generator="ctest-3.31.2"
 	CompilerName="/Library/Developer/CommandLineTools/usr/bin/c++"
 	CompilerVersion="16.0.0.16000026"
 	OSName="macOS"
-	Hostname="BorisPro3.local"
+	Hostname="mac.ucalgary.ca"
 	OSRelease="15.1.1"
 	OSVersion="24B91"
 	OSPlatform="arm64"
@@ -25,11 +25,11 @@
 	ProcessorClockFrequency="0"
 	>
 	<Testing>
-		<StartDateTime>Jan 24 12:49 MST</StartDateTime>
-		<StartTestTime>1737748141</StartTestTime>
+		<StartDateTime>Jan 25 17:47 MST</StartDateTime>
+		<StartTestTime>1737852452</StartTestTime>
 		<TestList/>
-		<EndDateTime>Jan 24 12:49 MST</EndDateTime>
-		<EndTestTime>1737748141</EndTestTime>
+		<EndDateTime>Jan 25 17:47 MST</EndDateTime>
+		<EndTestTime>1737852452</EndTestTime>
 		<ElapsedMinutes>0</ElapsedMinutes>
 	</Testing>
 </Site>

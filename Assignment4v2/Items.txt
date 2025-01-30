@@ -1,0 +1,13 @@
+spoon,  A regular spoon., true
+book, It has too many pages to read, true
+flower, They smell fresh., true
+goldenkey, This key is needed to escape the hall of doors., true
+hat, A whimsical and iconic piece that represents the eccentric Mad Hatter. No you cannot wear it!, true
+catplush, A cuddly version of the mischievous cat that can disappear and reappear., false
+bottle, Bottle marked "DRINK ME": This bottle makes Alice shrink when she drinks from it., true
+cake, Cake marked "EAT ME": This cake makes Alice grow to a very large size., True
+fan, White Rabbit's Fan: The fan that causes Alice to shrink when she uses it., true
+pocket-watch, Mad Hatter's Watch: A pocket-watch that tells the day of the month., true
+card-soldier, The playing cards that serve the Queen of Hearts., false
+playing-cards, This i just a stack of playing cards. There might be a king of hearts in there. All that matters is that the queen of hearts is in there. He is not important., true
+key, This key is needed to escape the hall of doors., true
